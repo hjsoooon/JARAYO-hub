@@ -88,7 +88,10 @@ const App: React.FC = () => {
         {/* FAQ */}
         <section className="py-32 px-6 border-t border-white/[0.03] bg-[#0c0c0e]">
           <div className="max-w-2xl mx-auto">
-            <h2 className="font-inter text-[10px] font-bold tracking-[0.3em] uppercase mb-12 text-center text-gray-500">자주묻는 질문</h2>
+            <div className="flex flex-col items-center mb-12">
+              <h2 className="font-inter text-xs font-bold tracking-[0.4em] uppercase text-[#ff8a00] mb-4">자주묻는 질문</h2>
+              <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+            </div>
             <div className="space-y-3">
               {FAQS.map((faq, idx) => (
                 <div key={idx} className="group border border-white/[0.05] rounded-xl overflow-hidden bg-white/[0.01]">
