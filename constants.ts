@@ -5,7 +5,7 @@ export const PROTOTYPE_LINKS = {
   babyOS: "https://example.com/test/baby-os",
   poopScan: "https://hjsoooon.github.io/poopscan/",
   expertCoach: "https://hjsoooon.github.io/Jarayo/",
-  urTurn: "https://example.com/test/ur-turn",
+  urTurn: "https://moonbo-debug.github.io/jarayo_02/#/home",
 };
 
 export const SERVICE_LINKS = {
