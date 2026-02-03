@@ -2,7 +2,7 @@
 import { PrototypeItem, FAQItem } from './types';
 
 export const PROTOTYPE_LINKS = {
-  babyOS: "https://example.com/test/baby-os",
+  babyOS: "https://t.maze.co/496433866",
   poopScan: "https://hjsoooon.github.io/poopscan/",
   expertCoach: "https://hjsoooon.github.io/Jarayo/",
   urTurn: "https://moonbo-debug.github.io/jarayo_02/#/home",
