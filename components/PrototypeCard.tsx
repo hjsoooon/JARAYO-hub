@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { PrototypeItem } from '../types';
 import { Button } from './Button';
 
@@ -8,40 +8,17 @@ interface PrototypeCardProps {
 }
 
 export const PrototypeCard: React.FC<PrototypeCardProps> = ({ item }) => {
-  const [clickCount, setClickCount] = useState(0);
-
-  useEffect(() => {
-    const savedCount = localStorage.getItem(`clicks_${item.id}`);
-    if (savedCount) {
-      setClickCount(parseInt(savedCount, 10));
-    }
-  }, [item.id]);
-
-  const handleTestClick = () => {
-    const newCount = clickCount + 1;
-    setClickCount(newCount);
-    localStorage.setItem(`clicks_${item.id}`, newCount.toString());
-  };
-
   return (
     <div className="card-hover-effect bg-[#15151a]/40 border border-white/10 rounded-[2rem] p-8 md:p-10 flex flex-col group">
       <div className="flex justify-between items-start mb-10">
         <div className="w-16 h-16 bg-white/[0.03] border border-white/[0.05] flex items-center justify-center rounded-2xl text-4xl shadow-inner group-hover:scale-110 transition-transform duration-500">
           {item.icon}
         </div>
-        <div className="flex flex-col items-end gap-3">
-          {item.badge && (
-            <span className="px-3 py-1 bg-[#ff8a00]/10 text-[#ff8a00] text-[10px] font-bold tracking-widest uppercase rounded-full border border-[#ff8a00]/20">
-              {item.badge}
-            </span>
-          )}
-          <div className="flex items-center gap-1.5 py-1 px-2 bg-white/[0.03] rounded-md border border-white/[0.05]">
-            <span className="w-1 h-1 rounded-full bg-[#ff8a00]"></span>
-            <span className="text-[9px] text-gray-500 font-bold tracking-tighter uppercase">
-              Tested: <span className="text-gray-300">{clickCount}</span>
-            </span>
-          </div>
-        </div>
+        {item.badge && (
+          <span className="px-3 py-1 bg-[#ff8a00]/10 text-[#ff8a00] text-[10px] font-bold tracking-widest uppercase rounded-full border border-[#ff8a00]/20">
+            {item.badge}
+          </span>
+        )}
       </div>
 
       <div className="mb-8">
@@ -80,7 +57,6 @@ export const PrototypeCard: React.FC<PrototypeCardProps> = ({ item }) => {
           href={item.link} 
           target="_blank" 
           rel="noopener" 
-          onClick={handleTestClick}
           className="flex-1 text-[13px] font-bold tracking-tight"
         >
           테스트 실행
