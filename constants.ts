@@ -12,7 +12,7 @@ export const SERVICE_LINKS = {
   babyOS: "https://babting.github.io/jarayo/",
   poopScan: "https://hjsoooon.github.io/poopscan/",
   expertCoach: "https://hjsoooon.github.io/Jarayo/",
-  urTurn: "https://jarayo.com/ur-turn",
+  urTurn: "https://moonbo-debug.github.io/jarayo_02/#/home",
 };
 
 export const PROTOTYPES: PrototypeItem[] = [
