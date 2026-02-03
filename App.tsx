@@ -19,7 +19,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 h-14 md:h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 bg-[#ff8a00] rounded-md flex items-center justify-center font-inter font-black text-white italic text-xs shadow-lg shadow-[#ff8a00]/20">J</div>
-            <span className="font-inter font-bold text-lg tracking-tighter">Jarayo</span>
+            <span className="font-inter font-bold text-lg tracking-tighter">JARAYO</span>
           </div>
           <button 
             onClick={scrollToPrototypes} 
@@ -42,7 +42,7 @@ const App: React.FC = () => {
             </div>
             
             <h1 className="font-inter text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[0.95]">
-              <span className="text-[#ff8a00]">Jarayo</span> <br className="hidden md:block" />
+              <span className="text-[#ff8a00]">JARAYO</span> <br className="hidden md:block" />
               <span className="text-premium-gradient">Prototype Hub</span>
             </h1>
             
@@ -88,7 +88,7 @@ const App: React.FC = () => {
         {/* FAQ */}
         <section className="py-32 px-6 border-t border-white/[0.03] bg-[#0c0c0e]">
           <div className="max-w-2xl mx-auto">
-            <h2 className="font-inter text-[10px] font-bold tracking-[0.3em] uppercase mb-12 text-center text-gray-500">Frequently Asked Questions</h2>
+            <h2 className="font-inter text-[10px] font-bold tracking-[0.3em] uppercase mb-12 text-center text-gray-500">자주묻는 질문</h2>
             <div className="space-y-3">
               {FAQS.map((faq, idx) => (
                 <div key={idx} className="group border border-white/[0.05] rounded-xl overflow-hidden bg-white/[0.01]">
@@ -118,9 +118,9 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="inline-flex items-center gap-2 mb-10 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
             <div className="w-5 h-5 bg-white/10 rounded flex items-center justify-center font-inter font-black text-[9px] italic text-white">J</div>
-            <span className="font-inter font-bold text-xs tracking-tighter">Jarayo</span>
+            <span className="font-inter font-bold text-xs tracking-tighter">JARAYO</span>
           </div>
-          <p className="font-inter text-[10px] font-bold tracking-[0.2em] uppercase text-gray-600 mb-2">Jarayo Internal Platform</p>
+          <p className="font-inter text-[10px] font-bold tracking-[0.2em] uppercase text-gray-600 mb-2">JARAYO Internal Platform</p>
           <p className="font-inter text-[9px] text-gray-700 mb-10 tracking-widest uppercase">&copy; 2026 JARAYO TEAM. ALL RIGHTS RESERVED.</p>
           <div className="flex justify-center gap-10">
             <a href="mailto:support@jarayo.dev" className="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-[#ff8a00] transition-colors">Contact</a>
