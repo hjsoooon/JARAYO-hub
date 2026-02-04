@@ -80,6 +80,10 @@ export const PROTOTYPES: PrototypeItem[] = [
 
 export const FAQS: FAQItem[] = [
   {
+    question: "어떻게 만들었나요?",
+    answer: "모든 프로토타입은 바이브코딩 툴(Google AI Studio, Google Antigravity, Cursor AI 등)을 활용해 제작했습니다. 지금 보고 계신 이 랜딩페이지도요!"
+  },
+  {
     question: "누가 만들었나요?",
     answer: "휴레이포지티브의 One Man Army! 손혜지, 이가인, 김문보가 만들었습니다. 궁금한 점이 있다면 언제든 직접 찾아와 편하게 이야기해 주세요!"
   },
