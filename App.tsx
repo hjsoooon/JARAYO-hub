@@ -144,7 +144,7 @@ const App: React.FC = () => {
             <span className="font-inter font-bold text-xs tracking-tighter">JARAYO</span>
           </button>
           <div className={`mb-6 transition-all duration-500 ${showSlogan ? 'opacity-100 max-h-10' : 'opacity-0 max-h-0'} overflow-hidden`}>
-            <p className="text-sm text-[#ff8a00] font-medium italic">"육아, 이제 우리와 함께해요 ✨"</p>
+            <p className="text-sm text-[#ff8a00] font-medium italic">자라요와 함께, 행복도 자라요 ✨</p>
           </div>
           <p className="font-inter text-[10px] font-bold tracking-[0.2em] uppercase text-gray-600 mb-2">JARAYO Internal Platform</p>
           <p className="font-inter text-[9px] text-gray-700 mb-10 tracking-widest uppercase">&copy; 2026 JARAYO TEAM. ALL RIGHTS RESERVED.</p>
