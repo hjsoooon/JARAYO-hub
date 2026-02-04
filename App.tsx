@@ -6,6 +6,7 @@ import { Button } from './components/Button';
 
 const App: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [showContactModal, setShowContactModal] = useState(false);
 
   const scrollToPrototypes = () => {
     const el = document.getElementById('prototypes');
@@ -126,11 +127,53 @@ const App: React.FC = () => {
           <p className="font-inter text-[10px] font-bold tracking-[0.2em] uppercase text-gray-600 mb-2">JARAYO Internal Platform</p>
           <p className="font-inter text-[9px] text-gray-700 mb-10 tracking-widest uppercase">&copy; 2026 JARAYO TEAM. ALL RIGHTS RESERVED.</p>
           <div className="flex justify-center gap-10">
-            <a href="mailto:support@jarayo.dev" className="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-[#ff8a00] transition-colors">Contact</a>
+            <button 
+              onClick={() => setShowContactModal(true)}
+              className="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-[#ff8a00] transition-colors"
+            >
+              Contact
+            </button>
             <a href="#" className="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-[#ff8a00] transition-colors">Internal Docs</a>
           </div>
         </div>
       </footer>
+
+      {/* Contact Modal */}
+      {showContactModal && (
+        <div 
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          onClick={() => setShowContactModal(false)}
+        >
+          <div 
+            className="relative bg-[#15151a] border border-white/10 rounded-2xl p-6 md:p-8 max-w-sm mx-4 text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setShowContactModal(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="w-12 h-12 bg-[#ff8a00]/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#ff8a00]/20">
+              <svg className="w-6 h-6 text-[#ff8a00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-white mb-3 tracking-tight">Contact</h3>
+            <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+              아래 이메일로 문의해 주세요.
+            </p>
+            <a 
+              href="mailto:hj.son@huray.net"
+              className="inline-block px-5 py-2.5 bg-[#ff8a00] text-white text-sm font-bold rounded-lg hover:bg-[#ff8a00]/90 transition-colors"
+            >
+              hj.son@huray.net
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
