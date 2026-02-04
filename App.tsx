@@ -8,6 +8,12 @@ const App: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showContactModal, setShowContactModal] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showSlogan, setShowSlogan] = useState(false);
+
+  const handleLogoClick = () => {
+    setShowSlogan(true);
+    setTimeout(() => setShowSlogan(false), 3000);
+  };
 
   const copyEmail = () => {
     navigator.clipboard.writeText('hj.son@huray.net');
@@ -130,9 +136,15 @@ const App: React.FC = () => {
       {/* Footer */}
       <footer className="py-12 md:py-24 px-4 md:px-6 border-t border-white/[0.03] text-center bg-[#0c0c0e]">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center gap-2 mb-10 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+          <button 
+            onClick={handleLogoClick}
+            className="inline-flex items-center gap-2 mb-4 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700 cursor-pointer"
+          >
             <div className="w-5 h-5 bg-white/10 rounded flex items-center justify-center font-inter font-black text-[9px] italic text-white">J</div>
             <span className="font-inter font-bold text-xs tracking-tighter">JARAYO</span>
+          </button>
+          <div className={`mb-6 transition-all duration-500 ${showSlogan ? 'opacity-100 max-h-10' : 'opacity-0 max-h-0'} overflow-hidden`}>
+            <p className="text-sm text-[#ff8a00] font-medium italic">"육아, 이제 우리와 함께해요 ✨"</p>
           </div>
           <p className="font-inter text-[10px] font-bold tracking-[0.2em] uppercase text-gray-600 mb-2">JARAYO Internal Platform</p>
           <p className="font-inter text-[9px] text-gray-700 mb-10 tracking-widest uppercase">&copy; 2026 JARAYO TEAM. ALL RIGHTS RESERVED.</p>
