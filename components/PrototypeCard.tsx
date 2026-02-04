@@ -9,9 +9,9 @@ interface PrototypeCardProps {
 
 export const PrototypeCard: React.FC<PrototypeCardProps> = ({ item }) => {
   return (
-    <div className="card-hover-effect bg-[#15151a]/40 border border-white/10 rounded-[2rem] p-8 md:p-10 flex flex-col group">
-      <div className="flex justify-between items-start mb-10">
-        <div className="w-16 h-16 bg-white/[0.03] border border-white/[0.05] flex items-center justify-center rounded-2xl text-4xl shadow-inner group-hover:scale-110 transition-transform duration-500">
+    <div className="card-hover-effect bg-[#15151a]/40 border border-white/10 rounded-2xl md:rounded-[2rem] p-5 md:p-10 flex flex-col group">
+      <div className="flex justify-between items-start mb-6 md:mb-10">
+        <div className="w-12 h-12 md:w-16 md:h-16 bg-white/[0.03] border border-white/[0.05] flex items-center justify-center rounded-xl md:rounded-2xl text-3xl md:text-4xl shadow-inner group-hover:scale-110 transition-transform duration-500">
           {item.icon}
         </div>
         {item.badge && (
@@ -21,25 +21,25 @@ export const PrototypeCard: React.FC<PrototypeCardProps> = ({ item }) => {
         )}
       </div>
 
-      <div className="mb-8">
-        <h3 className="text-2xl md:text-3xl font-bold mb-2 tracking-tight group-hover:text-[#ff8a00] transition-colors duration-300">
+      <div className="mb-5 md:mb-8">
+        <h3 className="text-xl md:text-3xl font-bold mb-2 tracking-tight group-hover:text-[#ff8a00] transition-colors duration-300">
           {item.title}
         </h3>
         <p className="text-[#ff8a00]/80 text-sm font-semibold mb-5 italic opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           "{item.slogan}"
         </p>
-        <p className="text-gray-400 text-base leading-relaxed font-medium opacity-90">
+        <p className="text-gray-400 text-sm md:text-base leading-relaxed font-medium opacity-90">
           {item.description}
         </p>
       </div>
 
-      <div className="mb-10 space-y-4">
+      <div className="mb-6 md:mb-10 space-y-3 md:space-y-4">
         <h4 className="text-[10px] font-bold text-gray-600 uppercase tracking-[0.2em] ml-1">Core Experience</h4>
-        <div className="space-y-4">
+        <div className="space-y-3 md:space-y-4">
           {item.keyValues.map((val, idx) => (
-            <div key={idx} className="flex gap-4 items-start">
-              <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#ff8a00] group-hover:scale-125 transition-transform"></div>
-              <p className="flex-1 text-sm text-gray-400 font-medium leading-relaxed group-hover:text-gray-300 transition-colors">
+            <div key={idx} className="flex gap-3 md:gap-4 items-start">
+              <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#ff8a00] flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+              <p className="flex-1 text-xs md:text-sm text-gray-400 font-medium leading-relaxed group-hover:text-gray-300 transition-colors">
                 {val}
               </p>
             </div>
@@ -52,7 +52,7 @@ export const PrototypeCard: React.FC<PrototypeCardProps> = ({ item }) => {
         )}
       </div>
 
-      <div className="mt-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="mt-auto grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
         <Button 
           href={item.link} 
           target="_blank" 

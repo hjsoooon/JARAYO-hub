@@ -32,7 +32,7 @@ const App: React.FC = () => {
 
       <main className="pt-14 md:pt-16">
         {/* Hero Section */}
-        <section className="relative px-6 pt-24 pb-20">
+        <section className="relative px-4 md:px-6 pt-16 md:pt-24 pb-12 md:pb-20">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-[#ff8a00]/5 blur-[120px] rounded-full pointer-events-none -z-10 opacity-60"></div>
           
           <div className="max-w-4xl mx-auto text-center">
@@ -41,12 +41,12 @@ const App: React.FC = () => {
               <span className="font-inter text-[9px] font-bold uppercase tracking-[0.2em] text-gray-500">Internal Prototype Lab</span>
             </div>
             
-            <h1 className="font-inter text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[0.95]">
+            <h1 className="font-inter text-4xl sm:text-5xl md:text-8xl font-extrabold mb-6 md:mb-8 tracking-tighter leading-[0.95]">
               <span className="text-[#ff8a00]">JARAYO</span> <br className="hidden md:block" />
               <span className="text-premium-gradient">Prototype Hub</span>
             </h1>
             
-            <p className="text-gray-400 text-lg md:text-xl mb-14 max-w-2xl mx-auto leading-relaxed font-medium tracking-tight opacity-80">
+            <p className="text-gray-400 text-base md:text-xl mb-10 md:mb-14 max-w-2xl mx-auto leading-relaxed font-medium tracking-tight opacity-80 px-2">
               더 나은 육아 경험을 위한 4가지 실험적 기능.<br className="hidden md:block" />
               프로토타입을 직접 실행하고 혁신을 경험해 보세요.
             </p>
@@ -72,13 +72,13 @@ const App: React.FC = () => {
         </section>
 
         {/* Prototype Grid */}
-        <section id="prototypes" className="py-32 px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col items-center mb-20">
+        <section id="prototypes" className="py-16 md:py-32 px-4 md:px-6 max-w-7xl mx-auto">
+          <div className="flex flex-col items-center mb-10 md:mb-20">
             <h2 className="font-inter text-xs font-bold tracking-[0.4em] uppercase text-[#ff8a00] mb-4">Innovation Library</h2>
             <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 lg:gap-12">
             {PROTOTYPES.map((item) => (
               <PrototypeCard key={item.id} item={item} />
             ))}
@@ -86,7 +86,7 @@ const App: React.FC = () => {
         </section>
 
         {/* FAQ */}
-        <section className="py-32 px-6 border-t border-white/[0.03] bg-[#0c0c0e]">
+        <section className="py-16 md:py-32 px-4 md:px-6 border-t border-white/[0.03] bg-[#0c0c0e]">
           <div className="max-w-2xl mx-auto">
             <div className="flex flex-col items-center mb-12">
               <h2 className="font-inter text-xs font-bold tracking-[0.4em] uppercase text-[#ff8a00] mb-4">자주묻는 질문</h2>
@@ -97,7 +97,7 @@ const App: React.FC = () => {
                 <div key={idx} className="group border border-white/[0.05] rounded-xl overflow-hidden bg-white/[0.01]">
                   <button 
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full px-7 py-5 text-left flex justify-between items-center group-hover:bg-white/[0.02] transition-all"
+                    className="w-full px-4 md:px-7 py-4 md:py-5 text-left flex justify-between items-center group-hover:bg-white/[0.02] transition-all"
                   >
                     <span className="font-semibold text-sm tracking-tight text-white/90 group-hover:text-white">{faq.question}</span>
                     <svg className={`w-4 h-4 text-[#ff8a00] opacity-50 transition-transform duration-500 ${openFaq === idx ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,7 +105,7 @@ const App: React.FC = () => {
                     </svg>
                   </button>
                   <div className={`transition-all duration-500 ease-[cubic-bezier(0.16, 1, 0.3, 1)] overflow-hidden ${openFaq === idx ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <div className="px-7 pb-6 pt-2 text-[13.5px] text-gray-500 leading-relaxed font-medium">
+                    <div className="px-4 md:px-7 pb-5 md:pb-6 pt-2 text-[13px] md:text-[13.5px] text-gray-500 leading-relaxed font-medium">
                       {faq.answer}
                     </div>
                   </div>
@@ -117,7 +117,7 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="py-24 px-6 border-t border-white/[0.03] text-center bg-[#0c0c0e]">
+      <footer className="py-12 md:py-24 px-4 md:px-6 border-t border-white/[0.03] text-center bg-[#0c0c0e]">
         <div className="max-w-7xl mx-auto">
           <div className="inline-flex items-center gap-2 mb-10 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
             <div className="w-5 h-5 bg-white/10 rounded flex items-center justify-center font-inter font-black text-[9px] italic text-white">J</div>
