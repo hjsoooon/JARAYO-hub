@@ -6,8 +6,8 @@ export interface PrototypeItem {
   slogan: string;
   description: string;
   keyValues: string[];
-  link: string;
-  serviceLink?: string; // New: Direct service URL
+  link?: string;
+  serviceLink?: string;
   disclaimer?: string;
   badge?: string;
 }

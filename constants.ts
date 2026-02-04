@@ -92,6 +92,19 @@ export const PROTOTYPES: PrototypeItem[] = [
     link: PROTOTYPE_LINKS.kdstHelper,
     serviceLink: SERVICE_LINKS.kdstHelper,
     badge: "Prototype"
+  },
+  {
+    id: "comingSoon",
+    icon: "🚀",
+    title: "Coming Soon",
+    slogan: "새로운 혁신을 준비 중이에요",
+    description: "더 나은 육아 경험을 위한 새로운 프로토타입이 곧 추가될 예정입니다. 기대해 주세요!",
+    keyValues: [
+      "지금도 새로운 아이디어를 실험하고 있어요",
+      "여러분의 피드백이 다음 서비스를 만듭니다",
+      "조금만 기다려 주세요 ✨"
+    ],
+    badge: "Coming Soon"
   }
 ];
 
