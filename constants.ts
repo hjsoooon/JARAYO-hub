@@ -3,9 +3,9 @@ import { PrototypeItem, FAQItem } from './types';
 
 export const PROTOTYPE_LINKS = {
   babyOS: "https://t.maze.co/496433866",
-  poopScan: "https://hjsoooon.github.io/poopscan/",
-  expertCoach: "https://hjsoooon.github.io/Jarayo/",
-  urTurn: "https://moonbo-debug.github.io/jarayo_02/#/home",
+  poopScan: "https://t.maze.co/496844020",
+  expertCoach: "https://t.maze.co/496432666",
+  urTurn: "https://t.maze.co/496644869",
 };
 
 export const SERVICE_LINKS = {
