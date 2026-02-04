@@ -7,6 +7,13 @@ import { Button } from './components/Button';
 const App: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showContactModal, setShowContactModal] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('hj.son@huray.net');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const scrollToPrototypes = () => {
     const el = document.getElementById('prototypes');
@@ -165,12 +172,33 @@ const App: React.FC = () => {
             <p className="text-sm text-gray-400 mb-4 leading-relaxed">
               아래 이메일로 문의해 주세요.
             </p>
-            <a 
-              href="mailto:hj.son@huray.net"
-              className="inline-block px-5 py-2.5 bg-[#ff8a00] text-white text-sm font-bold rounded-lg hover:bg-[#ff8a00]/90 transition-colors"
+            <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-3 mb-4">
+              <span className="text-white font-medium text-sm">hj.son@huray.net</span>
+            </div>
+            <button 
+              onClick={copyEmail}
+              className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold rounded-lg transition-all ${
+                copied 
+                  ? 'bg-green-500 text-white' 
+                  : 'bg-[#ff8a00] text-white hover:bg-[#ff8a00]/90'
+              }`}
             >
-              hj.son@huray.net
-            </a>
+              {copied ? (
+                <>
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  복사 완료!
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  복사하기
+                </>
+              )}
+            </button>
           </div>
         </div>
       )}
