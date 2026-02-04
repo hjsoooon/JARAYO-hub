@@ -6,6 +6,7 @@ export const PROTOTYPE_LINKS = {
   poopScan: "https://t.maze.co/496844020",
   expertCoach: "https://t.maze.co/496432666",
   urTurn: "https://t.maze.co/496644869",
+  kdstHelper: "#",
 };
 
 export const SERVICE_LINKS = {
@@ -13,6 +14,7 @@ export const SERVICE_LINKS = {
   poopScan: "https://hjsoooon.github.io/poopscan/",
   expertCoach: "https://hjsoooon.github.io/Jarayo/",
   urTurn: "https://moonbo-debug.github.io/jarayo_02/#/home",
+  kdstHelper: "https://babting.github.io/K-DST-helper/",
 };
 
 export const PROTOTYPES: PrototypeItem[] = [
@@ -74,6 +76,21 @@ export const PROTOTYPES: PrototypeItem[] = [
     ],
     link: PROTOTYPE_LINKS.urTurn,
     serviceLink: SERVICE_LINKS.urTurn,
+    badge: "Prototype"
+  },
+  {
+    id: "kdstHelper",
+    icon: "📊",
+    title: "아이건강해 (K-DST Helper)",
+    slogan: "키·몸무게·발달을 한눈에, 성장 레이더",
+    description: "K-DST 발달 검사와 표준 성장 곡선 데이터를 통해 우리 아이의 성장 발달 상태를 한눈에 관리하는 스마트 체크업 서비스",
+    keyValues: [
+      "K-DST 기준에 맞춘 정밀 체크리스트로 아이의 발달 단계를 과학적으로 진단",
+      "또래 대비 키/몸무게/머리둘레 백분위를 곡선 그래프로 구현해 성장 흐름 파악",
+      "발달 지연이 우려되거나 집중 성장이 필요한 부분을 짚어주는 맞춤 AI 솔루션"
+    ],
+    link: PROTOTYPE_LINKS.kdstHelper,
+    serviceLink: SERVICE_LINKS.kdstHelper,
     badge: "Prototype"
   }
 ];
