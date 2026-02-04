@@ -74,7 +74,7 @@ const App: React.FC = () => {
                     본 공간은 <span className="text-gray-300 font-semibold">사내 테스트 전용 빌드</span>입니다. 모든 기능은 개발 중이며 <span className="text-gray-400 border-b border-gray-700 underline-offset-4">실제 서비스와 상세 내용이 다를 수 있습니다.</span>
                   </p>
                   <p className="text-[13px] text-gray-500 leading-relaxed font-medium mt-2">
-                    테스트 완료 후 반드시 <span className="text-[#ff8a00] font-semibold">작업 종료 버튼</span>을 눌러주세요. 창을 그냥 닫으면 결과가 누락될 수 있어요.
+                    각 설문 항목의 테스트가 완료되면 반드시 <span className="text-[#ff8a00] font-semibold">작업 종료 버튼</span>을 눌러주세요. 창을 그냥 닫으면 결과가 누락될 수 있어요.
                   </p>
                 </div>
               </div>
