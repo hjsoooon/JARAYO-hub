@@ -55,7 +55,7 @@ const App: React.FC = () => {
             </h1>
             
             <p className="text-gray-400 text-base md:text-xl mb-10 md:mb-14 max-w-2xl mx-auto leading-relaxed font-medium tracking-tight opacity-80 px-2">
-              더 나은 육아 경험을 위한 4가지 실험적 기능.<br className="hidden md:block" />
+              더 나은 육아 경험을 위한 4가지 실험적 기능.<br />
               프로토타입을 직접 실행하고 혁신을 경험해 보세요.
             </p>
 
